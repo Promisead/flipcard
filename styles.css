@@ -1,0 +1,94 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    line-height: 1.6;
+    background: linear-gradient(45deg, lightgray,lightcyan);
+}
+
+.card {
+    width: 360px;
+    height: 460px;
+
+    position: relative;
+    perspective: 1200px;
+/*     cursor: pointer;
+ */}
+ .card:hover .card-back{
+     transform: rotateY(0deg);
+    }
+    .card:hover .card-front{
+        transform: rotateY(-180deg);
+    }
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 16px 0 lightblue;
+
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 1s cubic-bezier(0.3, 0.6, 0.3, 1.2);
+}
+.card-front{
+    background: url('team4.jpg') center center/cover no-repeat;
+}
+.card-back{
+    background: crimson;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+.profile-picture{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient( 135deg, lightblue, rgb(234, 159, 174));
+}
+.bio .name{
+    font-size: 1.8rem;
+    color: #002;
+}
+.bio .title{
+    font-size: 1.2rem;
+    color: lightcyan;
+}
+.icons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons .icon{
+    background: linear-gradient(135deg, rgb(74, 190, 228), lightgray);
+    color: #fff;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.icons .icon:hover{
+    color: blue;
+}
+#instagram:hover{
+    color:pink;
+}
